@@ -3,7 +3,7 @@ const SOURCEURL = "https://www.investopedia.com/"
 const EPSURL = "https://www.investopedia.com/terms/e/eps.asp#:~:text=Earnings%20per%20share%20(EPS)%20is%20a%20company's%20net%20profit%20divided,metric%20for%20estimating%20corporate%20value."
 const EEURL ="https://www.investopedia.com/terms/e/earningsestimate.asp#:~:text=our%20editorial%20policies-,What%20Is%20an%20Earnings%20Estimate%3F,attempting%20to%20value%20a%20firm."
 
-function Info(props) {
+function Info(props: any) {
 
   let arr = props.names
 

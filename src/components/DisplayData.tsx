@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import DataVis from './DataVis'
 
-function DisplayData(props) {
+function DisplayData(props: any) {
 
   return (
     <div className='transition-colors duration-1000 bg-dataColor dark:bg-stone-400 text-white rounded-xl h-fit w-fit p-10 m-10

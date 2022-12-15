@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 import { BiSearchAlt } from 'react-icons/bi'
 import { MdOutlineArrowDropDownCircle } from 'react-icons/md'
 
-function Search(props) {
+function Search(props: any) {
 
   const [visable, setVisable] = useState({
     className: 'hidden'
   })
 
   function search() {
-    let ticker = document.getElementById('search_stock').value
-    props.changeTicker(ticker.toUpperCase())
+    let value = (document.getElementById('search_stock') as HTMLInputElement | null)?.value;
+    props.changeTicker(value!.toUpperCase())
   }
 
   function toggleDropDown() {
@@ -36,7 +36,7 @@ function Search(props) {
 
           <div className='w-fit'>
             <input type="text" id='search_stock' className='float-left rounded-l-lg text-lg pl-1 p-1 font-mono font-semibold' placeholder={'Enter Ticker Here'} />
-            <BiSearchAlt onClick={() => search(document.getElementById('search_stock').value)} className='float-left cursor-pointer bg-slate-300 rounded-r-lg duration-300 hover:bg-blue-400' size={36} />
+            <BiSearchAlt onClick={() => search()} className='float-left cursor-pointer bg-slate-300 rounded-r-lg duration-300 hover:bg-blue-400' size={36} />
           </div>
 
           <div className='font-mono text-base mb-2 text-white'>

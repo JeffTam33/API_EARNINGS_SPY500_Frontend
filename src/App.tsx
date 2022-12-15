@@ -95,20 +95,20 @@ function App() {
     })
   }
 
-  const changeTicker = (ticker) =>  {
+  const changeTicker = (ticker: any) =>  {
     setTicker(ticker)
     findDataByTicker(ticker)
     console.log(ticker)
   }
   
-  const findDataByTicker = (ticker) => {
-    let ans = stocks.find(stock => stock.ticker === ticker)
+  const findDataByTicker = (ticker: any) => {
+    let ans = stocks.find(stock => stock['ticker'] === ticker)
     if(!ans) {
       console.log("Error, can not find ticker")
       return false
     }
     setSelectedStock(ans)
-    setDataEPS(Object.entries(ans.EPSResults))
+    setDataEPS(Object.entries(ans['EPSResults']))
   }
 
   function changeLightMode(){

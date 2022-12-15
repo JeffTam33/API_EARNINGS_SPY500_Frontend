@@ -19,7 +19,7 @@ ChartJS.register(
   Legend
 )
 
-function DataVis(props) {
+function DataVis(props : any) {
   let options = {
     responsive: true,
     plugins: {
