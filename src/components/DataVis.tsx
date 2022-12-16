@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Bar } from "react-chartjs-2"
+import 'chart.js/auto'
+import { Bar } from 'react-chartjs-2'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,6 +11,8 @@ import {
   Legend,
 } from 'chart.js'
 
+ChartJS.register(CategoryScale);
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -18,6 +21,8 @@ ChartJS.register(
   Tooltip,
   Legend
 )
+
+
 
 function DataVis(props : any) {
   let options = {
@@ -75,6 +80,8 @@ function DataVis(props : any) {
       },
     ],
   }
+
+
 
   return (
     <div className='w-96'>
