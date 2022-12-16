@@ -85,7 +85,7 @@ function DataVis(props : any) {
 
   return (
     <div className='w-96'>
-      <Bar className='w-96' height={"230%"} width={"330%"} options={options} data={data}  />
+      {/* <Bar className='w-96' height={"230%"} width={"330%"} options={options} data={data}  /> */}
     </div>
   )
 }
