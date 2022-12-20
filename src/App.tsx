@@ -117,21 +117,31 @@ function App() {
   }
 
   return (
-    <div className='grid grid-rows-1 transition-colors duration-1000 bg-slate-200 dark:bg-slate-700'>
+    <div className='grid grid-rows-1 transition-colors duration-1000 dark:bg-slate-700'>
       <div className='grid grid-rows-0 transition-colors duration-1000 bg-primary dark:bg-black h-52 w-full place-content-center justify-center text-white'>
-        <span className='float-left text-5xl font-mono'>API Earnings Stocks</span>
+      <div>
+        <span className='float-left text-4xl font-mono '>API Earnings Stocks</span>
+        <br/>
         <span className='float-left text-lg font-mono mt-4'>Search the 50 heavy weighted stocks of the S&P500</span>
+        <br/>
         <span className='float-left text-sm font-mono'>*Weighted of top 50 as of November 24, 2022</span>
+      </div>
+
+      <div>
+
+      </div>
+
         {
           night ? 
-            <MdOutlineNightlight onClick={changeLightMode} className='cursor-pointer toggle-dark ease-linear delay-150 rounded-lg transition-all:hover:bg-slate-500' size={50} /> : 
-            <MdNightlight onClick={changeLightMode} className='cursor-pointer toggle-dark ease-linear delay-150 rounded-lg transition-all:hover:bg-slate-500' size={50} />
+            <MdOutlineNightlight onClick={changeLightMode} className='m-auto cursor-pointer toggle-dark transition rounded-lg delay-100 hover:scale-100 hover:bg-black duration-300' size={50} /> : 
+            <MdNightlight onClick={changeLightMode} className='m-auto cursor-pointer toggle-darktransition rounded-lg delay-100 hover:scale-100 hover:bg-slate-500 duration-300 ' size={50} />
         }
       </div>
 
       <div className='grid grid-rows-1 grid-cols-1 gap-1 mt-1 ml-1 mr-1
-        lg:grid-cols-2
+
       '>
+
         <Info />
         <Search changeTicker={changeTicker} findDataByTicker={findDataByTicker} ticker={ticker} />
         <DisplayData tickerData={selectedStock} dataEPS={dataEPS} />

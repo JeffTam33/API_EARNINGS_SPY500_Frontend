@@ -8,8 +8,8 @@ function Info(props: any) {
   let arr = props.names
 
   return (
-    <div className='bg-infoColor dark:bg-zinc-800 text-white rounded-xl overflow-y-scroll scrollbar h-5/6 w-5/6 m-auto'>
-      <div className='mt-1 ml-3'>
+    <div className='mb-10 bg-infoColor dark:bg-zinc-800 shadow-[10px_10px_0px_0px_rgba(33,33,33)] duration-1000 text-white rounded-l-xl overflow-y-scroll scrollbar h-full w-5/6 m-auto'>
+      <div className='mb-10 mt-1 ml-3'>
         <p className='text-2xl'>Instructions</p>
         <p className='text-xl'>Enter the stock ticker symbol or company name</p>
         <p>Click on the search button to find the stock's histroy of beating earnings</p>
